@@ -18,7 +18,7 @@ akcja=$(zenity --list --title="Menu" \
   "Rozdziel plik PDF" \
   "Wyjście")
 
-case akcja in
+case "$akcja" in
  "Połącz pliki PDF")
   zenity --info --text="Połączenie PDF"
 ;;
