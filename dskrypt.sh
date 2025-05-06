@@ -24,7 +24,7 @@ case "$akcja" in
   zenity --info --text="Połączenie PDF"
 ;;
  "Rozdziel plik PDF")
-  ./separating.sh
+  ./separatingv3.sh
   zenity --info --text="Rozdzelenie PDF"
 ;;
  "Wyjście")
