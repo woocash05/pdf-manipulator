@@ -1,0 +1,55 @@
+.TH PDFMANI 8 "Maj 2025" "Wersja 1.0" "Podręcznik użytkownika"
+
+.SH NAZWA
+pdfmani \- interaktywne narzędzie do łączenia i separowania stron plików PDF.
+
+.SH SKŁADNIA
+.b pdfmani
+
+.SH OPIS
+.B pdfmani
+jest narzędziem opartym na interfejsie graficznym Zenity oraz narzędziach wbudowanych
+.BR pdfseparate (1)
+i
+.BR pdfunite (1),
+które pozwalają użytkownikowi
+.PP
+- Wyodrębnić wybrane strony pliku/wielu plików PDF i utworzyć nowy plik,
+.br
+- Połączyć wiele plików w jeden.
+
+.SH DZIAŁANIE
+Program wyświetla menu z trzema opcjami:
+.TP
+.B Połącz pliki PDF
+Umożliwia wybór wielu plików PDF do połączenia w jeden dokument wynikowy.
+
+.TP
+.B Rozdziel plik PDF
+Umożliwia wskazanie liczby plików PDF, a następnie dla każdego z nich zakresów stron do wyodrębnienia. Wynikowy dokument zawiera scalone wybrane strony.
+
+.TP
+.B Wyjście
+Kończy działanie programu.
+
+.SH WYMAGANIA
+Program wymaga zainstalowanych:
+- bash
+- zenity
+- poppler-utils (pdfseparate, pdfunite)
+
+.SH PLIKI
+.B ./pdfmani.sh
+\- skrypt główny
+.br
+.B ./mergingv2.sh
+\- skrypt odpowiedzialny za łączenie PDF
+.br
+.B ./separatingv3.sh
+\- skrypt odpowiedzialny za separację stron
+
+.SH AUTOR
+Łukasz Steciuk <s203666@student.pg.edu.pl>
+
+.SH LICENCJA
+GPL v3 — Zobacz: /usr/share/common-licenses/GPL
