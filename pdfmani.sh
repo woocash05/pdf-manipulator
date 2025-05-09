@@ -1,7 +1,7 @@
 # Author           : Lukasz Steciuk ( s203666@student.pg.edu.pl )
 # Created On       : 29.04.2025
 # Last Modified By : Lukasz Steciuk ( s203666@student.pg.edu.pl )
-# Last Modified On : 2.05.2025
+# Last Modified On : 8.05.2025
 # Version          : 1.0
 #
 # Description      : PDF manipulator: operations on files type PDF
