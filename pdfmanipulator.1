@@ -1,0 +1,87 @@
+.TH PDFMANIPULATOR 12 "Maj 2025" "Wersja 1.0" "Podręcznik użytkownika"
+
+.SH NAZWA
+pdfmanipulator \- interaktywne narzędzie do łączenia i separowania stron plików PDF.
+
+.SH SKŁADNIA
+.B ./pdfmanipulator.sh
+
+.SH OPIS
+.B pdfmanipulator
+jest narzędziem opartym na interfejsie graficznym Zenity oraz narzędziach wbudowanych
+.BR pdfseparate (1)
+i
+.BR pdfunite (1),
+które pozwalają użytkownikowi
+.PP
+- Wyodrębnić wybrane strony pliku/wielu plików PDF i utworzyć nowy plik,
+.br
+- Połączyć wiele plików w jeden.
+
+.SH DZIAŁANIE
+Program wyświetla menu z trzema opcjami:
+.TP
+.B Połącz pliki PDF
+Umożliwia wybór wielu plików PDF do połączenia w jeden dokument wynikowy.
+
+.TP
+.B "Tworzenie dokumentu z wybranych stron plików"
+Umożliwia wskazanie liczby plików PDF, a następnie dla każdego z nich zakresów stron do wyodrębnienia. Wynikowy dokument zawiera scalone wybrane strony.
+
+.TP
+.B Wyjście
+Kończy działanie programu.
+
+.SH PRZYKŁADY
+.TP
+.B Połączenie kilku plików PDF
+Aby połączyć kilka plików PDF w jeden, uruchom polecenie:
+.br
+.B ./pdfmanipulator.sh
+.br
+Wybierz opcję "Połącz pliki PDF"
+.br
+Podaj ile plików chcesz połączyć
+.br
+Wybierz pliki do połączenia za pomocą interfejsu Zenity
+.br
+Zostanie wygenerowany nowy plik PDF zawierający oba pliki.
+
+.TP
+.B Rozdzielenie stron z różnych plików PDF i połączenie w jeden
+Aby rozdzielić wybrane strony z pliku PDF, uruchom polecenie:
+.br
+.B ./pdfmanipulator.sh
+.br
+Wybierz opcję "Tworzenie dokumentu z wybranych stron plików"
+.br
+Podaj z ilu plików nastąpi wyodrębnienie
+.br
+Wybierz plik PDF i określ zakres stron do wyodrębnienia, np. 1-3,5,7-8.
+.br
+Zostanie wygenerowny wspólny plik PDF zawierający wyodrębnione zakresy stron z poszczególnych plików.
+
+.SH WYMAGANIA
+Program wymaga zainstalowanych:
+.br
+- bash
+.br
+- zenity
+.br
+- poppler-utils (pdfseparate, pdfunite)
+
+.SH PLIKI
+.B ./pdfmanipulator.sh
+\- skrypt główny
+.br
+.B ./mergingv2.sh
+\- skrypt odpowiedzialny za łączenie PDF
+.br
+.B ./separatingv3.sh
+\- skrypt odpowiedzialny za separację i scalenie stron w jeden dokument
+
+.SH AUTOR
+Łukasz Steciuk <s203666@student.pg.edu.pl>
+
+.SH LICENCJA
+GPL v3 — Zobacz: /usr/share/common-licenses/GPL
